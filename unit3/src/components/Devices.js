@@ -5,7 +5,11 @@ const Devices = ({ devices, getDeviceByID }) => {
     return <div> Out of stock</div>;
   }
 
-  const device = ({device});
+  
+  const device = () => {
+    console.log(device);
+
+  }
 
   return (
     <div className="device-container">

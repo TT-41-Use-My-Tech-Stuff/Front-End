@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Spinner } from "reactstrap";
+import React, { useEffect } from 'react'
+import { Spinner } from 'reactstrap'
 
 const Home = ({ isFetching, requestLogin }) => {
   // Temporary login request until login/signup page is created
@@ -10,8 +10,7 @@ const Home = ({ isFetching, requestLogin }) => {
     password: "abc123",
     first_name: "melissa",
     last_name: "tanksley",
-    experience: "some",
-    level: "1",
+
   };
 
   const userLogin = {

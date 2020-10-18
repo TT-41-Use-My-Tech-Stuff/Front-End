@@ -1,12 +1,17 @@
 import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
+import {
+  BrowserRouter as //Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
 import { Spinner } from 'reactstrap'
 // Components
-import Home from './components/Home'
+//import Home from './components/Home'
 import Devices from './components/Devices'
-import DeviceCard from './components/DeviceCard'
-//import Login from './components/Login'
-//import Signup from './components/Signup'
+//import DeviceCard from './components/DeviceCard'
+import Login from './components/Login'
+import Signup from './components/Signup'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 // Redux

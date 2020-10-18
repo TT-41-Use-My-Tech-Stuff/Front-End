@@ -5,8 +5,8 @@ import { Spinner } from 'reactstrap'
 import Home from './components/Home'
 import Devices from './components/Devices'
 import DeviceCard from './components/DeviceCard'
-//import Login from './components/Login'
-//import Signup from './components/Signup'
+import SignIn from './matt/SignIn'
+import SignUp from './matt/SignUp'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 // Redux
@@ -49,13 +49,13 @@ function App(props) {
                 />
               </Route>
               <Route path="/login">
-                <Login
+                <SignIn
                   requestLogin={props.requestLogin}
                   isFetching={props.isFetching}
                 />
               </Route>
               <Route path="/signup">
-                <Signup
+                <SignUp
                   requestSignup={props.requestSignup}
                   isFetching={props.isFetching}
                 />

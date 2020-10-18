@@ -25,7 +25,7 @@ const AddDevice = ({ addDevice, userID }) => {
     </button>
   );
 
-  // State for adding plant
+  // State for adding
   const [newDevice, setNewDevice] = useState({
     device_name: "",
     description: "",

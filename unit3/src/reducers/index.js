@@ -73,7 +73,7 @@ import {
           ...state,
           error: "",
           devices: newDevices,
-          loadedPlant: {},
+          loadedDevice: {},
           isFetching: false,
         };
       // FAILURE

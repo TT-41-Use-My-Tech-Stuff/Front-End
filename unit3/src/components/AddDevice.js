@@ -104,7 +104,7 @@ const AddDevice = ({ addDevice, userID }) => {
               <Label for="manufacture date">Manufacture Date</Label>
               <Input
                 type="date"
-                name="date_last_watered"
+                name=" "
                 onChange={(e) => {
                   handleChange(e);
                 }}

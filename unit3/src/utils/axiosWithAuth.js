@@ -9,6 +9,6 @@ export const axiosWithAuth = () => {
       Authorization: token,
     },
     //set base url for easier requests
-    baseURL: "https://use-my-tech-unit4.herokuapp.com",
+    baseURL: "https://tt-41-use-my-tech.herokuapp.com/",
   });
 };

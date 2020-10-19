@@ -12,6 +12,7 @@ const initialFormValues = {
     language: '',
     password: '',
     passwordConfirmation: '',
+    position: '',
     tos: false,
     }
 
@@ -21,6 +22,7 @@ const initialFormErrors = {
     language: '',
     password: '',
     passwordConfirmation: '',
+    position: '',
     tos: '\n',
 }
 const initialUsers = [{},{}]
@@ -48,13 +50,15 @@ function App() {
     
     const postNewUser = (newUser) => {       
         axios
-        .post("http://localhost:666/api/users", newUser)
+        .post("https://tt-41-use-my-tech.herokuapp.com/api/register", { email: newUser.email, username: `${newUser.name}`, password: `${newUser.password}` }
+
+)
         .then((res) => {
             setUsers([res.data, ...users])
             setFormValues(initialFormValues)
         })
         .catch((err) => {
-            alert("Something ain't right here \n Did you start the server?")
+            alert("Something ain't right here \n Did you check the server?")
             debugger
         })
     }

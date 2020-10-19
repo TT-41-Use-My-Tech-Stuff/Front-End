@@ -14,7 +14,7 @@ import { reducer } from './reducers/'
 import './styles/reset.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/index.css'
-import './styles/plants.css'
+
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 

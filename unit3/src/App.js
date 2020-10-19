@@ -24,6 +24,8 @@ import {
   updateDevice,
 } from './actions'
 
+
+
 function App(props) {
   return (
     <div className="App">
@@ -79,7 +81,7 @@ function App(props) {
             <Spinner
               color="info"
               id="loading-spinner"
-              style={{ width: "5rem", height: "5rem" }}
+              style={{ width: "3rem", height: "3rem" }}
             />
           )
         }

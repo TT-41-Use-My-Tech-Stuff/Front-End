@@ -27,12 +27,13 @@ const AddDevice = ({ addDevice, userID }) => {
 
   // State for adding
   const [newDevice, setNewDevice] = useState({
-    device_name: "",
-    description: "",
-    increment: 1,
-    maker: "",
-    device_url: "",
-    date_created: "",
+    id: "",
+    user_id: "",
+    item_name: "",
+    item_description: "",
+    category: "",
+    rate: "",
+    img_url: ""
   });
 
   // on submit will call add device action and close modal
@@ -44,12 +45,13 @@ const AddDevice = ({ addDevice, userID }) => {
 
     // Reset newDevice data
     setNewDevice({
-      device_name: "",
-      description: "",
-      increment: 1,
-      maker: "",
-      device_url: "",
-      date_created: "",
+    id: "",
+    user_id: "",
+    item_name: "",
+    item_description: "",
+    category: "",
+    rate: "",
+    img_url: ""
     });
   };
 
@@ -74,11 +76,11 @@ const AddDevice = ({ addDevice, userID }) => {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="name">Name of device</Label>
+                  <Label for="name">ID</Label>
                   <Input
                     type="text"
-                    name="device_name"
-                    placeholder="camera"
+                    name=""
+                    placeholder=""
                     onChange={(e) => {
                       handleChange(e);
                     }}
@@ -87,11 +89,11 @@ const AddDevice = ({ addDevice, userID }) => {
               </Col>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="device">Device</Label>
+                  <Label for="user">User ID</Label>
                   <Input
                     type="text"
-                    name="device_name"
-                    placeholder="laptop"
+                    name=""
+                    placeholder=""
                     onChange={(e) => {
                       handleChange(e);
                     }}
@@ -101,47 +103,59 @@ const AddDevice = ({ addDevice, userID }) => {
             </Row>
 
             <FormGroup>
-              <Label for="manufacture date">Manufacture Date</Label>
+              <Label for="name">Item Name</Label>
               <Input
-                type="date"
-                name=" "
+                type=""
+                name=""
                 onChange={(e) => {
                   handleChange(e);
                 }}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="available date">Available Date</Label>
+              <Label for="description">Item Description</Label>
               <Input
-                type="date"
-                name="next_availability"
+                type=""
+                name=""
                 onChange={(e) => {
                   handleChange(e);
                 }}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="imageURL">Device Image URL</Label>
+              <Label for="category">Category</Label>
               <Input
-                type="text"
-                name="device_url"
-                placeholder="e.g https://myimageurl.jpg"
+                type=""
+                name=""
+                placeholder=""
                 onChange={(e) => {
                   handleChange(e);
                 }}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="description">Description</Label>
+              <Label for="rate">Rate</Label>
               <Input
-                type="Sony"
-                name="description"
-                placeholder="Playstation"
+                type=""
+                name=""
+                placeholder=""
                 onChange={(e) => {
                   handleChange(e);
                 }}
               />
             </FormGroup>
+            <FormGroup>
+              <Label for="imageURL">Image URL</Label>
+              <Input
+                type=""
+                name=""
+                placeholder=""
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+              />
+            </FormGroup>
+            
           </Form>
         </ModalBody>
         <ModalFooter>
@@ -159,3 +173,9 @@ const AddDevice = ({ addDevice, userID }) => {
 
 export default AddDevice;
 
+/*device_name: "",
+    description: "",
+    increment: 1,
+    maker: "",
+    device_url: "",
+    date_created: "", */

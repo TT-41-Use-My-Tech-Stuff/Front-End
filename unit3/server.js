@@ -14,7 +14,7 @@ let users = [
     email: 'matt@matt.matt',
     language: 'Blowing into a Nintendo Cartridge',
     position: 'Idiocy, Slacking Off, and Tomfoolery',
-    password: '1234',
+    password: '',
     tos: true,
   },
   {

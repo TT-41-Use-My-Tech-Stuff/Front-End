@@ -57,6 +57,7 @@ describe('create-user-form', () => {
         pwdInput().should('have.value','text@text.text')
         pwdConfInput().should('have.value','text@text.text')
         langSelect().select('Java')
+        roleSelect().select('Team Lead')
         agreeChk().click()
         submitBtn().should('be.enabled').click()
 

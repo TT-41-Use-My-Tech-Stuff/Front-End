@@ -66,7 +66,7 @@ import {
       case UPDATE_DEVICE_SUCCESS:
         console.log(action.payload.device);
         const newDevices = state.devices.filter((device) => {
-          return device.id != action.deviceID;
+          return device.id !== action.deviceID;
         });
         newDevices.push(action.payload.device);
         return {

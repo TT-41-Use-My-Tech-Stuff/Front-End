@@ -7,11 +7,10 @@ import {
 } from 'react-router-dom'
 import { Spinner } from 'reactstrap'
 // Components
-import Home from './components/Home'
 import Devices from './components/Devices'
-import DeviceCard from './components/DeviceCard'
-//import Login from './components/Login'
-//import Signup from './components/Signup'
+//import DeviceCard from './components/DeviceCard'
+import Login from './components/SignIn'
+import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 // Redux
@@ -36,10 +35,10 @@ function App(props) {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login">SignIn</Link>
           </li>
           <li>
-            <Link to="/signup">Signup</Link>
+            <Link to="/signup">SignUp</Link>
           </li>
         </ul>
       </nav>

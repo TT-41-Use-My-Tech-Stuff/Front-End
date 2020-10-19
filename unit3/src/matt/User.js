@@ -1,4 +1,5 @@
 import React from 'react'
+import './matt.css'
 
 export default function User({ details }) {
     if (!details){return <h3>Working of your request...</h3>}

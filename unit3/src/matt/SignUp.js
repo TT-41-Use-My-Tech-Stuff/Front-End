@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './matt.css'
-import Form from './Form'
+import Form from './SignUpForm'
 import User from './User'
 import axios from "axios"
 import * as yup from "yup"
-import schema from './formSchema'
+import schema from './signUpSchema'
 
 const initialFormValues = {
     name: '',

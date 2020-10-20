@@ -2,17 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-// Router
+
 import { BrowserRouter as Router } from 'react-router-dom'
-// Redux
-import { applyMiddleware, createStore } from 'redux'
-import { Provider } from 'react-redux'
+
+import {applyMiddleware, createStore} from 'redux'
+import {Provider} from 'react-redux'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import { reducer } from './reducers/'
-// Styles
+
 import './styles/reset.css'
-import 'styles/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/index.css'
 
 //const logger = {};

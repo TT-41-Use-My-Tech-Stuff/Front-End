@@ -8,10 +8,9 @@ import {
 import { Spinner } from 'reactstrap'
 // Components
 import Devices from './components/Devices'
-import DeviceCard from './components/DeviceCard'
-import Login from './matt/SignIn'
-import Signup from './matt/SignUp'
-
+//import DeviceCard from './components/DeviceCard'
+import Login from './components/SignIn'
+import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 // Redux
@@ -23,6 +22,9 @@ import {
   requestLogin,
   updateDevice,
 } from './actions'
+
+
+
 function App(props) {
   return (
     <div className="App">
@@ -30,7 +32,7 @@ function App(props) {
         <h1>Use My Tech Stuff</h1>
         <ul>
           <li>
-            <Link to="https://compassionate-curie-a3daaf.netlify.app/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/login">SignIn</Link>
@@ -45,7 +47,7 @@ function App(props) {
           //Shows Loading in the content field if is fetching is true
           !props.isFetching ? (
             <Switch>
-              <Route exact path="https://nostalgic-mclean-b29c3f.netlify.app/">
+              <Route exact path="/">
                 <AddDevice addDevice={props.addDevice} userID={props.user.id} />
                 <Devices
                   devices={props.devices}
@@ -95,11 +97,11 @@ function mapStateToProps(state) {
     isFetching: state.isFetching,
   };
 }
+
 export default connect(mapStateToProps, {
   requestLogin,
   requestSignup,
   addDevice,
   getDeviceByID,
   updateDevice,
-
-})(App);
+})(App); 

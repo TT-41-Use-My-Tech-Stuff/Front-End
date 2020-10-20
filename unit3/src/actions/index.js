@@ -110,7 +110,7 @@ export const updateUser = (userData, id) => (dispatch) => {
       dispatch({ type: UPDATE_USER_FAILURE, payload: err });
     });
 };
-/**** ACTIONS FOR DELETE ****/
+
 export const DELETE_DEVICE_SUCCESS = "DELETE_DEVICE_SUCCESS";
 export const DELETE_DEVICE_FAILURE = "DELETE_DEVICE_FAILURE";
 

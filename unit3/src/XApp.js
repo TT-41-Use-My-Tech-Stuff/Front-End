@@ -1,17 +1,12 @@
 import React from 'react'
-import {
-  BrowserRouter as //Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import { Spinner } from 'reactstrap'
 // Components
+import Home from './components/Home'
 import Devices from './components/Devices'
 import DeviceCard from './components/DeviceCard'
-import Login from './matt/SignIn'
-import Signup from './matt/SignUp'
-
+import SignIn from './matt/SignIn'
+import SignUp from './matt/SignUp'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 // Redux
@@ -23,6 +18,7 @@ import {
   requestLogin,
   updateDevice,
 } from './actions'
+
 function App(props) {
   return (
     <div className="App">
@@ -33,10 +29,10 @@ function App(props) {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/login">SignIn</Link>
+            <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/signup">SignUp</Link>
+            <Link to="/signup">Signup</Link>
           </li>
         </ul>
       </nav>
@@ -53,13 +49,13 @@ function App(props) {
                 />
               </Route>
               <Route path="/login">
-                <Login
+                <SignIn
                   requestLogin={props.requestLogin}
                   isFetching={props.isFetching}
                 />
               </Route>
               <Route path="/signup">
-                <Signup
+                <SignUp
                   requestSignup={props.requestSignup}
                   isFetching={props.isFetching}
                 />
@@ -78,7 +74,7 @@ function App(props) {
             <Spinner
               color="info"
               id="loading-spinner"
-              style={{ width: "3rem", height: "3rem" }}
+              style={{ width: "5rem", height: "5rem" }}
             />
           )
         }
@@ -95,11 +91,11 @@ function mapStateToProps(state) {
     isFetching: state.isFetching,
   };
 }
+
 export default connect(mapStateToProps, {
   requestLogin,
   requestSignup,
   addDevice,
   getDeviceByID,
   updateDevice,
-
 })(App);

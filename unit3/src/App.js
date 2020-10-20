@@ -30,7 +30,7 @@ function App(props) {
         <h1>Use My Tech Stuff</h1>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="https://compassionate-curie-a3daaf.netlify.app/">Home</Link>
           </li>
           <li>
             <Link to="/login">SignIn</Link>
@@ -45,7 +45,7 @@ function App(props) {
           //Shows Loading in the content field if is fetching is true
           !props.isFetching ? (
             <Switch>
-              <Route exact path="/">
+              <Route exact path="https://nostalgic-mclean-b29c3f.netlify.app/">
                 <AddDevice addDevice={props.addDevice} userID={props.user.id} />
                 <Devices
                   devices={props.devices}

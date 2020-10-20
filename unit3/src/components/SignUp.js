@@ -18,7 +18,7 @@ const initialFormValues = {
     password: '',
     passwordConfirmation: '',
     tos: false,
-    }
+}
 
 const initialFormErrors = {
     name: '',

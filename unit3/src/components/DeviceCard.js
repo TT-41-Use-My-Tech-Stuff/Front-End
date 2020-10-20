@@ -41,3 +41,5 @@ const DeviceCard = ({ device, getDeviceByID }) => {
 };
 
 export default DeviceCard;
+
+

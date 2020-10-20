@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios'
 
 export const axiosWithAuth = () => {
   // Set token in local storage
@@ -9,6 +9,6 @@ export const axiosWithAuth = () => {
       Authorization: token,
     },
     //set base url for easier requests
-    baseURL: "https://waterplantsunit4.herokuapp.com",
+    baseURL: "https://tt-41-use-my-tech.herokuapp.com/",
   });
 };

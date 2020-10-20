@@ -8,9 +8,10 @@ import {
 import { Spinner } from 'reactstrap'
 // Components
 import Devices from './components/Devices'
-//import DeviceCard from './components/DeviceCard'
+import DeviceCard from './components/DeviceCard'
 import Login from './matt/SignIn'
 import Signup from './matt/SignUp'
+
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 // Redux
@@ -100,4 +101,5 @@ export default connect(mapStateToProps, {
   addDevice,
   getDeviceByID,
   updateDevice,
+
 })(App);

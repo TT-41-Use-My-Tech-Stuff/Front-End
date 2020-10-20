@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.3",
     "axios": "^0.20.0",
     "child_process": "^1.0.2",
     "cors": "^2.8.5",
@@ -22,6 +23,7 @@
     "react-scripts": "3.4.3",
     "reactstrap": "^8.6.0",
     "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
     "uuid": "^8.3.1",
     "yup": "^0.29.3"
   },

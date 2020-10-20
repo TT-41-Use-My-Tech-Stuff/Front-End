@@ -12,7 +12,7 @@ import thunk from 'redux-thunk'
 import { reducer } from './reducers/'
 // Styles
 import './styles/reset.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'styles/bootstrap.min.css'
 import './styles/index.css'
 
 //const logger = {};

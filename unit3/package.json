@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.1",
@@ -18,6 +20,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "reqres": "^3.0.1",
+    "uuid": "^8.3.1",
     "yup": "^0.29.3"
   },
   "scripts": {

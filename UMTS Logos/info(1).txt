@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Variane Script
+font link: https://www.behance.net/gallery/26855635/Variane-Script-Font
+font author: Boy Moch Tomi
+font author site: https://www.behance.net/workinsstudio
+Slogan Font: KaushanScript-Regular.ttf
+
+icon designer: Ben Didier
+icon designer link: /ben.didier1
+        
+
+fontColor: {"hex":"#754220"}
+bgColor: {"hex":"#D5CCC0"}
+iconColor: {"hex":"#754220"}
+sloganColor: {"hex":"#004c54"}
+      

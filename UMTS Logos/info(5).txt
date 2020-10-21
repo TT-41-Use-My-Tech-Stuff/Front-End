@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Fondamento-Italic
+font link: https://fonts.google.com/specimen/Fondamento
+font author: Astigmatic
+font author site: http://www.astigmatic.com/
+Slogan Font: SpaceMono-Regular.ttf
+
+icon designer: Shahriar Emil
+icon designer link: /shahriaremil
+        
+
+fontColor: {"hex":"#046a38"}
+bgColor: {"hex":"#51473c"}
+iconColor: {"hex":"#046a38"}
+sloganColor: {"hex":"#ffffff"}
+      

@@ -31,6 +31,7 @@ function App() {
     const postLogin = (user) => {       
         axios
         .post("https://tt-41-use-my-tech.herokuapp.com/api/login", { username: `${user.username}`, password: `${user.password}` }
+    
 
 )
         .then((res) => {
@@ -73,10 +74,6 @@ function App() {
         postLogin(user)
         setFormValues(initialFormValues)
     }
-
-    useEffect(() => {
-        {}
-    }, [])
 
     useEffect(() => {
         schema.isValid(formValues).then((valid) => {

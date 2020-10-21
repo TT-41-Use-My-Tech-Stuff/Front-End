@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/matt.css'
 import Form from './SignUpForm'
-// import User from './User'
 import axios from "axios"
 import * as yup from "yup"
 import schema from './signUpSchema'
@@ -25,6 +24,7 @@ const initialFormErrors = {
     position: '',
     tos: '\n',
 }
+
 const initialUsers = []
 const initialDisabled = true
 
@@ -34,25 +34,11 @@ function App() {
     const [formValues, setFormValues] = useState(initialFormValues)
     const [formErrors, setFormErrors] = useState(initialFormErrors)
     const [disabled, setDisabled] = useState(initialDisabled)
-  
-    const getUsers = () => {       
-        axios
-        .get(`http://localhost:666/api/users`)
-        .then((res) => {
-            console.log(res)
-            setUsers(res.data)
-        })
-        .catch((err) => {
-            alert("Something ain't right here \n Did you start the server?")
-            debugger
-        })
-    }
     
     const postNewUser = (newUser) => {       
         axios
-        .post("https://tt-41-use-my-tech.herokuapp.com/api/register", { email: newUser.email, username: `${newUser.name}`, password: `${newUser.password}` }
-
-)
+        .post("https://tt-41-use-my-tech.herokuapp.com/api/register", { email: newUser.email, username: `${newUser.name}`, password: `${newUser.password}` 
+        })
         .then((res) => {
             setUsers([res.data, ...users])
             setFormValues(initialFormValues)
@@ -99,16 +85,10 @@ function App() {
     }
 
     useEffect(() => {
-        getUsers()
-    }, [])
-
-    useEffect(() => {
         schema.isValid(formValues).then((valid) => {
             setDisabled(!valid)
         })
     }, [formValues])
-
-
 
     return (
         <div className="App">
@@ -120,9 +100,7 @@ function App() {
                 errors={formErrors}
             />
         </div> 
-//             {users.map((user) => {
-//             return <User key={user.id} details={user} />
-//             )
     )
 }
+
 export default App

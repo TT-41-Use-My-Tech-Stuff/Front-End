@@ -24,7 +24,7 @@ return (
         </div>        
         <div className='input container'>
             <div className='inputRow'>
-                <label for='name'>Username / Email</label>
+                <label htmlFor='name'>Username / Email</label>
                 <input
                     value={values.username}
                     className='input'
@@ -34,7 +34,7 @@ return (
                 />
             </div>
             <div className='inputRow'>
-                <label for='password'>
+                <label htmlFor='password'>
                     Password
                 </label>
                 <input
@@ -47,16 +47,16 @@ return (
             </div>
         </div>
         <div className='agree'>
-        <input
-                className='agreeSubmit'
-                type='checkbox'
-                name='tos'
-                checked={values.tos}
-                onChange={onChange}
-            />
-        <label for='tos' className='terms'>
-            Even though I still can't be bothered to read the  <a href='/'> terms of service </a> I'll still check this box so we can move on.
-        </label>
+            <input
+                    className='agreeSubmit'
+                    type='checkbox'
+                    name='tos'
+                    checked={values.tos}
+                    onChange={onChange}
+                />
+            <label htmlFor='tos' className='terms'
+            >Even though I still can't be bothered to read the  <a href='/'> terms of service </a> I'll still check this box so we can move on.
+            </label>
         </div>
         <button name='submitButton' className='submit-button' disabled={disabled}>Submit</button>
     </form>

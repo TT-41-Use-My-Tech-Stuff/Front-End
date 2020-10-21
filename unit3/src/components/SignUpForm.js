@@ -28,7 +28,7 @@ return (
         </div>        
         <div className='input container'>
             <div className='inputRow'>
-                <label for='name'>Name</label>
+                <label htmlFor='name'>Name</label>
                 <input
                     value={values.name}
                     className='input'
@@ -38,7 +38,7 @@ return (
                 />
             </div>
             <div className='inputRow'>
-                <label for='email'>
+                <label htmlFor='email'>
                     E-mail
                 </label>
                 <input
@@ -50,7 +50,7 @@ return (
                 />
             </div>
         <div className='inputRow'>
-            <label for='password'>
+            <label htmlFor='password'>
                 Password
             </label>
             <input
@@ -62,10 +62,9 @@ return (
             />
         </div>
         <div className='inputRow'>
-            <label for='passwordConfirmation'>
+            <label htmlFor='passwordConfirmation'>
                 Confirm Password
             </label>
-        
             <input
                 value={values.passwordConfirmation}
                 className='input'
@@ -75,7 +74,7 @@ return (
             />
         </div>
         <div className='inputRow'>
-            <label for='language'>
+            <label htmlFor='language'>
                 Preferred Language
             </label>        
             <select onChange={onChange} value={values.language} name='language' className='select input'>
@@ -94,7 +93,7 @@ return (
             </select>
         </div>
         <div className='inputRow'>
-            <label for='position'>
+            <label htmlFor='position'>
                 Team Position
             </label>        
             <select onChange={onChange} value={values.position} name='position' className='select input'>
@@ -105,11 +104,9 @@ return (
                 <option value='reactii'>React II</option>
                 <option value='reacti'>React I</option>
                 <option value='uiux'>UI/UX</option>
-
             </select>
         </div>
     </div>
-    
         <div className='agree'>
             <input
                 className='agreeSubmit'
@@ -118,7 +115,7 @@ return (
                 checked={values.tos}
                 onChange={onChange}
             />
-        <label for='tos'className='terms'>
+        <label htmlFor='tos'className='terms'>
             I agree to the <a href='/'> terms of service </a> even though I haven't read them
         </label>
         </div>

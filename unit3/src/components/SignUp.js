@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react'
-//import './matt.css'
-//import Form from './Form'
-//import User from './User'
+import '../styles/matt.css'
+import Form from './SignUpForm'
+// import User from './User'
 import axios from "axios"
-//import * as yup from "yup"
-//import schema from './formSchema'
-
-const Form = {};
-const User = {};
-const schema = {};
-const yup = {};
+import * as yup from "yup"
+import schema from './signUpSchema'
 
 const initialFormValues = {
     name: '',
@@ -17,8 +12,9 @@ const initialFormValues = {
     language: '',
     password: '',
     passwordConfirmation: '',
+    position: '',
     tos: false,
-}
+    }
 
 const initialFormErrors = {
     name: '',
@@ -26,18 +22,19 @@ const initialFormErrors = {
     language: '',
     password: '',
     passwordConfirmation: '',
+    position: '',
     tos: '\n',
 }
-const initialUsers = [{},{}]
+const initialUsers = []
 const initialDisabled = true
 
 function App() {
-
+  
     const [users, setUsers] = useState(initialUsers)
     const [formValues, setFormValues] = useState(initialFormValues)
     const [formErrors, setFormErrors] = useState(initialFormErrors)
     const [disabled, setDisabled] = useState(initialDisabled)
-
+  
     const getUsers = () => {       
         axios
         .get(`http://localhost:666/api/users`)
@@ -50,16 +47,18 @@ function App() {
             debugger
         })
     }
-
+    
     const postNewUser = (newUser) => {       
         axios
-        .post("http://localhost:666/api/users", newUser)
+        .post("https://tt-41-use-my-tech.herokuapp.com/api/register", { email: newUser.email, username: `${newUser.name}`, password: `${newUser.password}` }
+
+)
         .then((res) => {
             setUsers([res.data, ...users])
             setFormValues(initialFormValues)
         })
         .catch((err) => {
-            alert("Something ain't right here \n Did you start the server?")
+            alert("Something ain't right here \n Did you check the server?")
             debugger
         })
     }
@@ -120,12 +119,10 @@ function App() {
                 disabled={disabled}
                 errors={formErrors}
             />
-
-            {users.map((user) => {
-                return <User key={user.id} details={user} />
-            })}
-        </div>
+        </div> 
+//             {users.map((user) => {
+//             return <User key={user.id} details={user} />
+//             )
     )
 }
-
 export default App

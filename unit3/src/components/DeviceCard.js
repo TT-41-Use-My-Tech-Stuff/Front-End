@@ -8,38 +8,43 @@ import {
   CardBody,
   Button,
   CardTitle,
-  CardSubtitle,
+  CardSubtitle
 } from 'reactstrap'
 
 const DeviceCard = ({ device, getDeviceByID }) => {
   // Code
 
   return (
-    <div className="device-card">
-      <Card body inverse color="info">
-        <CardBody>
+    <div className='device-card'>
+      <Card body inverse color='inf'>
+
+        {/* <CardBody>
           <CardTitle>{device.device_name}</CardTitle>
           <CardSubtitle>Return Date {device.next_return}</CardSubtitle>
-        </CardBody>
-        <CardImg width="100%" src={device.device_url} alt="Card image cap" />
+        </CardBody> */}
+
+        <CardImg width='100%' src={device.device_url} alt='Card image cap' />
+
         <CardText>
           <span>
-            Description: {device.description} <br />
-            Type: {device.type} <br />
-            Date Created: {device.date_created}
+            id: {device.getDeviceByID} <br />
+            user_id: {device.user_id} <br />
+            item_description: {device.item_description} <br />
+            category: {device.category} <br />
+            rate: {device.rate} <br />
+            img_url: {device.img_url}
           </span>
         </CardText>
-        <CardBody>
+
+        {/* <CardBody>
           <Button color="primary">Rent</Button>
           <Link to={`/devices/${device.id}`}>
             <Button color="secondary" onClick={() => { getDeviceByID(device.id) }}>Edit</Button>
           </Link>
-        </CardBody>
+        </CardBody> */}
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default DeviceCard;
-
-
+export default DeviceCard

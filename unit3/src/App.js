@@ -8,7 +8,7 @@ import {
 import { Spinner } from 'reactstrap'
 // Components
 import Devices from './components/Devices'
-//import DeviceCard from './components/DeviceCard'
+import DeviceCard from './components/DeviceCard'
 import Login from './components/SignIn'
 import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'
@@ -17,6 +17,7 @@ import Elements from './components/Elements'
 import Generic from './components/Generic'
 // import Nav from './components/Nav'
 import Home from './components/Home'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Redux
 import { connect } from 'react-redux'

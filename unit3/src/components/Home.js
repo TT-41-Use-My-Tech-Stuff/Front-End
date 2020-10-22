@@ -7,7 +7,6 @@ import Generic from './Generic'
 
 
 
-
 export default function Anotherindex(props) {
 
 

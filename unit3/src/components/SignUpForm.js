@@ -1,7 +1,7 @@
 import React from 'react'
-// import '../styles/matt.css'
+import '../styles/matt.css'
 
-function Form(props){
+export default function Form(props){
 
 const { values, submit, change, disabled, errors } = props
 const onSubmit = (e) => {
@@ -126,4 +126,3 @@ return (
             <button name='submitButton' className='submit-button' disabled={disabled}>Submit</button>
     </form>
 )}
-export default Form

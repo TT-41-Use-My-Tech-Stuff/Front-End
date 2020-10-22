@@ -8,7 +8,7 @@ import {
 import { Spinner } from 'reactstrap'
 // Components
 import Devices from './components/Devices'
-//import DeviceCard from './components/DeviceCard'
+import DeviceCard from './components/DeviceCard'
 import Login from './components/SignIn'
 import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'

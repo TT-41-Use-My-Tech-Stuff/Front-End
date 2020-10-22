@@ -34,19 +34,19 @@ export const getUserByID = (id) => (dispatch) => {
 };
 
 /**** ACTIONS FOR POST ****/
-export const POST_LOGIN_SUCCESS = "POST_LOGIN_SUCCESS";
-export const POST_LOGIN_FAILURE = "POST_LOGIN_FAILURE";
+export const POST_SIGNIN_SUCCESS = "POST_SIGNIN_SUCCESS";
+export const POST_SIGNIN_FAILURE = "POST_SIGNIN_FAILURE";
 
 export const requestLogin = (userData) => (dispatch) => {
   dispatch({ type: IS_FETCHING });
   axiosWithAuth()
-    .post("/login", userData)
+    .post("/signin", userData)
     .then((res) => {
       localStorage.setItem("token", res.data.token);
-      dispatch({ type: POST_LOGIN_SUCCESS, payload: res.data });
+      dispatch({ type: POST_SIGNIN_SUCCESS, payload: res.data });
     })
     .catch((err) => {
-      dispatch({ type: POST_LOGIN_FAILURE, payload: err });
+      dispatch({ type: POST_SIGNIN_FAILURE, payload: err });
     });
 };
 
@@ -56,7 +56,7 @@ export const POST_SIGNUP_FAILURE = "POST_SIGNUP_FAILURE";
 export const requestSignup = (userData) => (dispatch) => {
   dispatch({ type: IS_FETCHING });
   axiosWithAuth()
-    .post("/register", userData)
+    .post("/signup", userData)
     .then((res) => {
       dispatch({ type: POST_SIGNUP_SUCCESS, payload: res.data });
     })

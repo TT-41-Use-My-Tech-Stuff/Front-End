@@ -1,7 +1,7 @@
 import {
     IS_FETCHING,
-    POST_LOGIN_SUCCESS,
-    POST_LOGIN_FAILURE,
+    POST_SIGNIN_SUCCESS,
+    POST_SIGNIN_FAILURE,
     POST_SIGNUP_SUCCESS,
     POST_SIGNUP_FAILURE,
     POST_DEVICE_SUCCESS,
@@ -34,7 +34,7 @@ import {
         };
       // SUCCESS
       case POST_SIGNUP_SUCCESS:
-      case POST_LOGIN_SUCCESS:
+      case POST_SIGNIN_SUCCESS:
         return {
           ...state,
           error: "",
@@ -78,7 +78,7 @@ import {
         };
       // FAILURE
       case POST_SIGNUP_FAILURE:
-      case POST_LOGIN_FAILURE:
+      case POST_SIGNIN_FAILURE:
       case POST_DEVICE_FAILURE:
       case FETCH_DEVICEID_FAILURE:
       case FETCH_USERID_FAILURE:

@@ -1,15 +1,16 @@
 import React from 'react'
 import "../styles/assets/css/main.css"
 import "../styles/assets/css/noscript.css"
-// import Nav from './Nav'
+import Nav from './Nav'
 
 
-export default function generic() {
+export default function generic(props) {
     return (
         <div>
               
             {/* Page Wrapper */}
             <div id="page-wrapper">
+                <Nav />
                 {/* Header */}
                 <nav>
                 {/* Main */}

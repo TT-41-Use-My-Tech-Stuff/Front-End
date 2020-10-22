@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from 'axios'
 
-const DEVICE_API_BASE_URL = "https://tt-41-use-my-tech.herokuapp.com/";
+const DEVICE_API_BASE_URL = "https://tt-41-use-my-tech.herokuapp.com/"
 
 class Device {
 

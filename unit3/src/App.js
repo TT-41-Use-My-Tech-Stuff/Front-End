@@ -15,7 +15,7 @@ import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 import Elements from './components/Elements'
 import Generic from './components/Generic'
-import Nav from './components/Nav'
+// import Nav from './components/Nav'
 import Home from './components/Home'
 
 // Redux
@@ -33,13 +33,13 @@ import {
 function App(props) {
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav /> */}
       <div className="content">
         {
           //Shows Loading in the content field if is fetching is true
           !props.isFetching ? (
             <Switch>
-              <Route path="/">
+              <Route exact path="/">
                   <Home />
               </Route>
               
@@ -50,13 +50,13 @@ function App(props) {
                   getDeviceByID={props.getDeviceByID}
                 />
               </Route>
-              <Route path="/login">
+              <Route path="/SignIn">
                 <Login
                   requestLogin={props.requestLogin}
                   isFetching={props.isFetching}
                 />
               </Route>
-              <Route path="/signup">
+              <Route path="/SignUp">
                 <Signup
                   requestSignup={props.requestSignup}
                   isFetching={props.isFetching}

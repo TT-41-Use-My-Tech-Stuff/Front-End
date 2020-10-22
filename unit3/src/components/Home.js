@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/assets/css/noscript.css'
 import '../styles/assets/css/main.css'
-import Nav from './Nav'
+// import Nav from './Nav'
 import Generic from './Generic'
 
 
@@ -12,17 +12,7 @@ export default function Anotherindex(props) {
 
 
 
-    const [ isOpen, toggleOpen ] = useState(false)
-    function onClick(e){ 
-    
-    // useEffect(() => {
-
-        const onClick = () => toggleOpen(!isOpen)
-        isOpen ? e.target.classList = '' : e.target.classList = 'menuToggle'
-
-    // })
-    }
-
+  
 
     return (
         <div>
@@ -36,9 +26,9 @@ export default function Anotherindex(props) {
             {/* Page Wrapper */}
             <div id="page-wrapper">
                 {/* Header */}
-                <Nav
-                    toggleOpen = {toggleOpen}
-                    Nav.classList ? isOpen=true : isOpen=false
+                {/* <Nav */}
+                    toggleOpen = {props.toggleOpen}
+                    classList[0] ? isOpen=true : isOpen=false
                  />
                 {/* Banner */}
                 <section id="banner">

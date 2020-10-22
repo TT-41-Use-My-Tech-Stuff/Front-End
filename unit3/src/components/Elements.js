@@ -1,7 +1,7 @@
   import React from 'react'
   import "../styles/assets/css/main.css"
   import "../styles/assets/css/noscript.css"
-  import Nav from './Nav'
+//   import Nav from './Nav'
   
 
   export default function Elements() {
@@ -10,7 +10,7 @@
    
     <div id="page-wrapper">
       {/* Header */}
-        <Nav />
+        {/* <Nav /> */}
       {/* Main */}
       <article id="main">
           <section>

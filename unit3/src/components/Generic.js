@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/assets/css/main.css"
 import "../styles/assets/css/noscript.css"
-import Nav from './Nav'
+// import Nav from './Nav'
 
 
 export default function generic() {
@@ -14,7 +14,7 @@ export default function generic() {
                 <nav>
                 {/* Main */}
                 <article id="main">
-                    <Nav />>
+                    {/* <Nav /> */}
                     <section className="wrapper style5">
                     <div className="inner">
                         <h3>Lorem ipsum dolor</h3>

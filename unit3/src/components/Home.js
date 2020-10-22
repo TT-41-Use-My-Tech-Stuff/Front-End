@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/assets/css/noscript.css'
 import '../styles/assets/css/main.css'
+import Nav from './Nav'
+import Generic from './Generic'
 
 
 
 
-export default function Anotherindex() {
+
+export default function Anotherindex(props) {
+
 
 
     const [ isOpen, toggleOpen ] = useState(false)
@@ -32,25 +36,10 @@ export default function Anotherindex() {
             {/* Page Wrapper */}
             <div id="page-wrapper">
                 {/* Header */}
-                <header id="header" className="alt">
-                <h1><a href="index.html">Use My Tech Stuff</a></h1>
-                <nav id="nav">
-                    <ul>
-                    <li className="special">
-                        <a href="#menu" className="menuToggle" onClick={onClick}><span>Menu</span></a>
-                        <div id="menu">
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/generic">Features</a></li>
-                            <li><a href="/elements">Squad Goals</a></li>
-                            <li><a href="/signup">Sign Up</a></li>
-                            <li><a href="/signin">Log In</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    </ul>
-                </nav>
-                </header>
+                <Nav
+                    toggleOpen = {toggleOpen}
+                    Nav.classList ? isOpen=true : isOpen=false
+                 />
                 {/* Banner */}
                 <section id="banner">
                 <div className="inner">

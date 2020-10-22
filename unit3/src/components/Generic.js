@@ -14,10 +14,7 @@ export default function generic() {
                 <nav>
                 {/* Main */}
                 <article id="main">
-                    <header>
-                    <h2>Features</h2>
-                    <p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
-                    </header>
+                    <Nav />>
                     <section className="wrapper style5">
                     <div className="inner">
                         <h3>Lorem ipsum dolor</h3>

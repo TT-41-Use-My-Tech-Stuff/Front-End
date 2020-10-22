@@ -6,18 +6,9 @@ import Generic from './Generic'
 
 export default function Home(props) {
 
-    return (
-            
-        <div id="page-wrapper">
-            {/* Header */}
-            <Nav
-                isOpen = {props.isOpen}
-               
-                />
-           
-            <section id="banner">
-            <div className="inner">
-                <h2>Use My Tech Stuff</h2>
+  <section id="banner">
+      <div className="inner">
+          <h2>Use My Tech Stuff</h2>
                 <p>
                 Tired of paying ridiculous fees for camera and other equipment<br />
                 rentals? Bypass the middleman and rent from a real person!
@@ -82,7 +73,7 @@ export default function Home(props) {
                     Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
                     imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
                 </p>
-                </div>
+              </div>
             </section>
             <section className="spotlight">
                 <div className="image"><img src="../styles/images/pic03.jpg" alt /></div>

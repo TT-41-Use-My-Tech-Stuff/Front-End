@@ -17,6 +17,7 @@ import Elements from './components/Elements'
 import Generic from './components/Generic'
 // import Nav from './components/Nav'
 import Home from './components/Home'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Redux
 import { connect } from 'react-redux'

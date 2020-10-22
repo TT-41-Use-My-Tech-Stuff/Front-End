@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/assets/css/noscript.css'
 import '../styles/assets/css/main.css'
-// import Nav from './Nav'
+import Nav from './Nav'
 import Generic from './Generic'
 
 
@@ -29,7 +29,7 @@ export default function Anotherindex(props) {
                 {/* <Nav */}
                     toggleOpen = {props.toggleOpen}
                     classList[0] ? isOpen=true : isOpen=false
-                 />
+            />
                 {/* Banner */}
                 <section id="banner">
                 <div className="inner">

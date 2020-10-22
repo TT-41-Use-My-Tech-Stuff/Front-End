@@ -36,12 +36,12 @@ const DeviceCard = ({ device, getDeviceByID }) => {
           </span>
         </CardText>
 
-        {/* <CardBody>
-          <Button color="primary">Rent</Button>
+        <CardBody>
+          <Button color='primary'>Rent</Button>
           <Link to={`/devices/${device.id}`}>
-            <Button color="secondary" onClick={() => { getDeviceByID(device.id) }}>Edit</Button>
+            <Button color='secondary' onClick={() => { getDeviceByID(device.id) }}>Edit</Button>
           </Link>
-        </CardBody> */}
+        </CardBody>
       </Card>
     </div>
   )

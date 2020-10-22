@@ -13,10 +13,9 @@ import { reducer } from './reducers/'
 
 import './styles/reset.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import './styles/index.css'
+import './styles/index.css'
 
 
-//const logger = {};
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(

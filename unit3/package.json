@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
+    "child_process": "^1.0.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^16.14.0",
@@ -24,6 +25,7 @@
     "yup": "^0.29.3"
   },
   "scripts": {
+    "matt": "node matt.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "cypress open",

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/matt.css'
+// import '../styles/matt.css'
 
 function Form(props){
 
@@ -13,6 +13,10 @@ const onChange = (e) => {
     const valueToUse = type === 'checkbox' ? checked : value
     change(name, valueToUse)
 }
+
+const redirectRoute = () => {
+    {}
+} 
 
 return (
     <form className='container' onSubmit={onSubmit}>
@@ -58,7 +62,7 @@ return (
             >Even though I still can't be bothered to read the  <a href='/'> terms of service </a> I'll still check this box so we can move on.
             </label>
         </div>
-        <button name='submitButton' className='submit-button' disabled={disabled}>Submit</button>
+        <button name='submitButton' className='submit-button' disabled={disabled} onClick={redirectRoute}>Submit</button>
     </form>
 )}
 export default Form

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/matt.css'
+// import '../styles/matt.css'
 
 function Form(props){
 
@@ -32,6 +32,7 @@ return (
                 <input
                     value={values.name}
                     className='input'
+                    placeholder= 'Name'
                     onChange={onChange}
                     name='name'
                     type='text'
@@ -44,6 +45,7 @@ return (
                 <input
                     value={values.email}
                     className='input'
+                    placeholder= 'E-Mail'
                     onChange={onChange}
                     name='email'
                     type='text'
@@ -56,6 +58,7 @@ return (
             <input
                 value={values.password}
                 className='input'
+                placeholder='Password' 
                 onChange={onChange}
                 name='password'
                 type='password'
@@ -69,6 +72,7 @@ return (
                 value={values.passwordConfirmation}
                 className='input'
                 onChange={onChange}
+                placeholder='Repeat Passwprd'
                 name='passwordConfirmation'
                 type='password'
             />

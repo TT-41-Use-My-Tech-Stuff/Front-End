@@ -13,6 +13,11 @@ import Login from './components/SignIn'
 import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
+import Elements from './components/Elements'
+import Generic from './components/Generic'
+import Nav from './components/Nav'
+import Home from './components/Home'
+
 // Redux
 import { connect } from 'react-redux'
 import {
@@ -28,26 +33,17 @@ import {
 function App(props) {
   return (
     <div className="App">
-      <nav>
-        <h1>Use My Tech Stuff</h1>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/login">SignIn</Link>
-          </li>
-          <li>
-            <Link to="/signup">SignUp</Link>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
       <div className="content">
         {
           //Shows Loading in the content field if is fetching is true
           !props.isFetching ? (
             <Switch>
-              <Route exact path="/">
+              <Route path="/">
+                  <Home />
+              </Route>
+              
+              <Route path="/AddDevice">
                 <AddDevice addDevice={props.addDevice} userID={props.user.id} />
                 <Devices
                   devices={props.devices}
@@ -74,6 +70,16 @@ function App(props) {
                   device={props.loadedDevice}
                   updateDevice={props.updateDevice}
                 />
+              </Route>
+              <Route path="/Elements">
+                <Elements />
+              </Route>
+
+              <Route path="/Generic">
+                <Generic />
+              </Route>
+              <Route to='#menu'>
+                  
               </Route>
             </Switch>
           ) : (

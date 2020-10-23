@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/matt.css'
-// import Nav from './Nav'
+import Nav from './Nav'
 
 export default function Form(props){
 
@@ -21,8 +21,8 @@ const redirectRoute = () => {
 
 return (
     <div>
-        {/* <Nav /> */}
-            <form className='container' onSubmit={onSubmit}>
+        <Nav />
+            <Form className='container' onSubmit={onSubmit}>
                 <h2>Log In</h2>
                 <div className='errors'>
                     <p>{errors.username}</p>
@@ -66,6 +66,6 @@ return (
                     </label>
                 </div>
                 <button name='submitButton' className='submit-button' disabled={disabled} onClick={redirectRoute}>Submit</button>
-            </form>
+            </Form>
         </div>
 )}

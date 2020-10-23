@@ -8,16 +8,16 @@ import {
 import { Spinner } from 'reactstrap'
 // Components
 import Devices from './components/Devices'
-// import DeviceCard from './components/DeviceCard'
+import DeviceCard from './components/DeviceCard'
 import Login from './components/SignIn'
 import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 import Elements from './components/Elements'
 import Generic from './components/Generic'
-// import Nav from './components/Nav'
+import Nav from './components/Nav'
 import Home from './components/Home'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Redux
 import { connect } from 'react-redux'
@@ -31,10 +31,10 @@ import {
 
 
 
-function App(props) {
+function App(props) {git 
   return (
     <div className="App">
-      {/* <Nav /> */}
+      <Nav />
       <div className="content">
         {
           //Shows Loading in the content field if is fetching is true

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/matt.css'
+import Nav from './Nav'
 
 export default function Form(props){
 
@@ -15,7 +16,10 @@ const onChange = (e) => {
 }
 
 return (
-    <form className='container' onSubmit={onSubmit}>
+
+    <Form className='container' onSubmit={onSubmit}>
+    <Nav />
+
         <h2>Add New User</h2>
         <div className='errors'>
             <div>{errors.name}</div>
@@ -124,5 +128,5 @@ return (
         </label>
         </div>
             <button name='submitButton' className='submit-button' disabled={disabled}>Submit</button>
-    </form>
+    </Form>
 )}

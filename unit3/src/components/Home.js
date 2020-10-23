@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import '../styles/assets/css/noscript.css'
-import '../styles/assets/css/main.css'
-// import Nav from './Nav'
+// import './assets/css/noscript.css'
+// import './assets/css/main.css'
+import Nav from './Nav'
 import Generic from './Generic'
 
 export default function Home(props) {
     return(
         <div>
-        {/* <Nav /> */}
+        <Nav />
   <section id="banner">
       <div className="inner">
           <h2>Use My Tech Stuff</h2>

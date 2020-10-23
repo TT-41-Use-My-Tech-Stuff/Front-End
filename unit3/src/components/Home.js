@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/assets/css/noscript.css'
 import '../styles/assets/css/main.css'
-import Nav from './Nav'
+// import Nav from './Nav'
 import Generic from './Generic'
 
 export default function Home(props) {
+<<<<<<< HEAD
 
     <section id="banner">
+=======
+    return(
+        <div>
+        {/* <Nav /> */}
+  <section id="banner">
+>>>>>>> ee654f9f6cd9f1b71808929f9a0424864fbc574e
       <div className="inner">
           <h2>Use My Tech Stuff</h2>
             <>
@@ -89,6 +96,7 @@ export default function Home(props) {
                     Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
                     imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
                 </p>
+
                 </div>
             </section>
             {/* Three */}
@@ -164,6 +172,7 @@ export default function Home(props) {
                     <li><a href="#" className="button fit">Learn More</a></li>
                 </ul>
             </div>
+
             </section>
             {/* Footer */}
             <footer id="footer">

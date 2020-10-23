@@ -50,5 +50,9 @@
   "devDependencies": {
     "cypress": "^5.4.0"
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> ee654f9f6cd9f1b71808929f9a0424864fbc574e

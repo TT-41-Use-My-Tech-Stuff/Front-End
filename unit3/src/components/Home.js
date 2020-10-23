@@ -5,8 +5,8 @@ import Nav from './Nav'
 import Generic from './Generic'
 
 export default function Home(props) {
-
-<<<<<<< Updated upstream
+    return(
+        <div>
   <section id="banner">
       <div className="inner">
           <h2>Use My Tech Stuff</h2>
@@ -164,7 +164,7 @@ export default function Home(props) {
                 <li><a href="#" className="button fit">Learn More</a></li>
                 </ul>
             </div>
-<<<<<<< Updated upstream
+
             </section>
             {/* Footer */}
             <footer id="footer">
@@ -191,7 +191,5 @@ export default function Home(props) {
             </ul>
             </footer>
         </div>
-=======
->>>>>>> Stashed changes
     )
 }

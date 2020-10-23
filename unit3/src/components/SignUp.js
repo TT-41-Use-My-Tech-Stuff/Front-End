@@ -49,16 +49,6 @@ const SignUp = () => {
           name='password'
           ref={register({
             required: 'Password required'
-            minlength: {
-              value: 8,
-              message: "Passwords must be atleast 8 characters long"
-            }
-          })}
-        />
-        <button type="submit">Log in</button>
-      </form>
-    </div>
-  );
-};
+}
 
-export default SignUp;
+export default SignUp

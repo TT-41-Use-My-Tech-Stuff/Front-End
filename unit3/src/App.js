@@ -1,37 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
 import { Switch, Route, Link } from 'react-router-dom'
-=======
-import {
-  BrowserRouter as //Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom'
-import { Spinner } from 'reactstrap'
-// Components
-import Devices from './components/Devices'
-// import DeviceCard from './components/DeviceCard'
-import Login from './components/SignIn'
-import Signup from './components/SignUp'
-import AddDevice from './components/AddDevice'
-import LoadedDevice from './components/LoadedDevice'
-import Elements from './components/Elements'
-import Generic from './components/Generic'
-// import Nav from './components/Nav'
-import Home from './components/Home'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-// Redux
-import { connect } from 'react-redux'
-import {
-  addDevice,
-  getDeviceByID,
-  requestSignup,
-  requestLogin,
-  updateDevice,
-} from './actions'
->>>>>>> ee654f9f6cd9f1b71808929f9a0424864fbc574e
 
 import DeviceList from './components/DeviceList'
 import DeviceForm from './components/DeviceForm'
@@ -67,9 +35,9 @@ export default function App () {
           <Route path="/devicelist/:id">
             <DeviceForm />
           </Route>
-          <Route path='/signin'>
-            <SignIn />
-          </Route>
+         //<Route path='signin'>
+           </li> <SignIn />
+          </ul></Route>
           <Route path='/signup'>
             <Signup />
           </Route>

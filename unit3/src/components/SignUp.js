@@ -1,106 +1,64 @@
-import React, { useState, useEffect } from 'react'
-import '../styles/matt.css'
-import Form from './SignUpForm'
-import axios from "axios"
-import * as yup from "yup"
-import schema from './signUpSchema'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
-const initialFormValues = {
-    name: '',
-    email: '',
-    language: '',
-    password: '',
-    passwordConfirmation: '',
-    position: '',
-    tos: false,
-    }
+import { axiosWithAuth } from '../utils/axiosWithAuth'
 
-const initialFormErrors = {
-    name: '',
-    email: '',
-    language: '',
-    password: '',
-    passwordConfirmation: '',
-    position: '',
-    tos: '\n',
-}
+const SignUp = () => {
+  const { register, handleSubmit, errors, setValue } = useForm()
+  const history = useHistory()
 
-const initialUsers = []
-const initialDisabled = true
+  const onSubmit = (data) => {
+    console.log(data)
+    const newUser = {
+      email: data.email,
+      username: data.username,
+      password: data.password
+    };
+    axiosWithAuth()
+      .post('/api/register', newUser)
+      .then((res) => {
+        console.log(res);
+        history.push('/login')
+      })
+      .catch((err) => console.log(err))
+    // history.push('/login')
+    setValue('email', '')
+    setValue('password', '')
+    setValue('username', '')
+  }
 
-function App() {
-  
-    const [users, setUsers] = useState(initialUsers)
-    const [formValues, setFormValues] = useState(initialFormValues)
-    const [formErrors, setFormErrors] = useState(initialFormErrors)
-    const [disabled, setDisabled] = useState(initialDisabled)
-    
-    const postNewUser = (newUser) => {       
-        axios
-        .post("https://tt-41-use-my-tech.herokuapp.com/api/register", { email: newUser.email, username: `${newUser.name}`, password: `${newUser.password}` 
-        })
-        .then((res) => {
-            setUsers([res.data, ...users])
-            setFormValues(initialFormValues)
-        })
-        .catch((err) => {
-            alert("Something ain't right here \n Did you check the server?")
-            debugger
-        })
-    }
+  return (
+    <div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          type='email'
+          placeholder='Example@example.com'
+          name='email'
+          ref={register({ required: 'Email required' })}
+        />
+        <input
+          type='username'
+          placeholder='username'
+          name='username'
+          ref={register({ required: 'Username required' })}
+        />
+        <input
+          type='password'
+          placeholder='Password"'
+          name='password'
+          ref={register({
+            required: 'Password required'
+            minlength: {
+              value: 8,
+              message: "Passwords must be atleast 8 characters long"
+            }
+          })}
+        />
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+  );
+};
 
-    const inputChange = (name, value) => {
-    yup
-        .reach(schema, name)
-        .validate(value)
-        .then(() => {
-            setFormErrors({
-                ...formErrors,
-                [name]: "",
-            })
-        })
-        .catch((err) => {
-            setFormErrors({
-                ...formErrors,
-                [name]: err.errors[0],
-            })
-        })
-
-        setFormValues({
-            ...formValues,
-            [name]: value,
-        })
-    }
-
-    const formSubmit = () => {
-        const newUser = {
-            name: formValues.name.trim(),
-            email: formValues.email.trim(),
-            password: formValues.password,
-            language: formValues.language,
-            tos: formValues.tos
-        }
-        postNewUser(newUser)
-        setFormValues(initialFormValues)
-    }
-
-    useEffect(() => {
-        schema.isValid(formValues).then((valid) => {
-            setDisabled(!valid)
-        })
-    }, [formValues])
-
-    return (
-        <div className="App">
-            <Form 
-                values={formValues}
-                change={inputChange}
-                submit={formSubmit}
-                disabled={disabled}
-                errors={formErrors}
-            />
-        </div> 
-    )
-}
-
-export default App
+export default SignUp;

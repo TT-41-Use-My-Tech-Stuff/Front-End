@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const DEVICE_API_BASE_URL = "https://tt-41-use-my-tech.herokuapp.com/"
+const DEVICE_API_BASE_URL = 'https://tt-41-use-my-tech.herokuapp.com/'
 
 class Device {
 
-    getDevice(){
-        return axios.get(DEVICE_API_BASE_URL);
+  getDevice () {
+    return axios.get(DEVICE_API_BASE_URL);
     }
 
     createDevice(device){

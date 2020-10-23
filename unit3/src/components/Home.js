@@ -6,9 +6,10 @@ import Generic from './Generic'
 
 export default function Home(props) {
 
-  <section id="banner">
+    <section id="banner">
       <div className="inner">
           <h2>Use My Tech Stuff</h2>
+            <>
                 <p>
                 Tired of paying ridiculous fees for camera and other equipment<br />
                 rentals? Bypass the middleman and rent from a real person!
@@ -16,13 +17,15 @@ export default function Home(props) {
                 <ul className="actions special">
                 <li><a href="#" className="button primary">Explore Items</a></li>
                 </ul>
-            </div>
+            </>
             <a href="#one" className="more scrolly">Learn More</a>
-            </section>
+        </div>
+    </section>
+    
             {/* One */}
-            <section id="one" className="wrapper style1 special">
-            <div className="inner">
-                <header className="major">
+    <section id="one" className="wrapper style1 special">
+        <div className="inner">
+            <header className="major">
                 <h2>
                     Arcu aliquet vel lobortis ata nisl<br />
                     eget augue amet aliquet nisl cep donec
@@ -33,22 +36,22 @@ export default function Home(props) {
                     fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
                     ullamcorper.
                 </p>
-                </header>
+            </header>
                 <ul className="icons major">
-                <li>
-                    <span className="icon fa-gem major style1"><span className="label">Lorem</span></span>
-                </li>
-                <li>
-                    <span className="icon fa-heart major style2"><span className="label">Ipsum</span></span>
-                </li>
-                <li>
-                    <span className="icon solid fa-code major style3"><span className="label">Dolor</span></span>
-                </li>
-                </ul>
-            </div>
-            </section>
+                    <li>
+                        <span className="icon fa-gem major style1"><span className="label">Lorem</span></span>
+                    </li>
+                    <li>
+                        <span className="icon fa-heart major style2"><span className="label">Ipsum</span></span>
+                    </li>
+                    <li>
+                        <span className="icon solid fa-code major style3"><span className="label">Dolor</span></span>
+                    </li>
+                    </ul>
+        </div>
+    </section>
             {/* Two */}
-            <section id="two" className="wrapper alt style2">
+    <section id="two" className="wrapper alt style2">
             <section className="spotlight">
                 <div className="image"><img src="images/pic01.jpg" alt /></div>
                 <div className="content">
@@ -87,7 +90,6 @@ export default function Home(props) {
                     imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
                 </p>
                 </div>
-            </section>
             </section>
             {/* Three */}
             <section id="three" className="wrapper style3 special">
@@ -150,16 +152,16 @@ export default function Home(props) {
             {/* CTA */}
             <section id="cta" className="wrapper style4">
             <div className="inner">
-                <header>
+            <header>
                 <h2>Arcue ut vel commodo</h2>
                 <p>
                     Aliquam ut ex ut augue consectetur interdum endrerit imperdiet
                     amet eleifend fringilla.
                 </p>
-                </header>
+            </header>
                 <ul className="actions stacked">
-                <li><a href="#" className="button fit primary">Activate</a></li>
-                <li><a href="#" className="button fit">Learn More</a></li>
+                    <li><a href="#" className="button fit primary">Activate</a></li>
+                    <li><a href="#" className="button fit">Learn More</a></li>
                 </ul>
             </div>
             </section>
@@ -167,10 +169,10 @@ export default function Home(props) {
             <footer id="footer">
             <ul className="icons">
                 <li>
-                <a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a>
+                    <a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a>
                 </li>
                 <li>
-                <a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a>
+                    <a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a>
                 </li>
                 <li>
                 <a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a>
@@ -187,6 +189,7 @@ export default function Home(props) {
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
             </footer>
-        </div>
+        </section>
+    
     )
 }

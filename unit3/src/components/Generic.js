@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/assets/css/main.css"
 import "../styles/assets/css/noscript.css"
-import Nav from './Nav'
+// import Nav from './Nav'
 
 
 export default function generic(props) {
@@ -10,7 +10,7 @@ export default function generic(props) {
               
             {/* Page Wrapper */}
             <div id="page-wrapper">
-                <Nav />
+                {/* <Nav /> */}
                 {/* Header */}
                 <nav>
                 {/* Main */}

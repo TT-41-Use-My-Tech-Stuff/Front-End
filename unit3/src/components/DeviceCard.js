@@ -15,6 +15,11 @@ const DeviceCard = ({ device, getDeviceByID }) => {
   // Code
 
   return (
+<<<<<<< HEAD
+   <h1>Hi i'm a device card</h1>
+  )
+}
+=======
     <div className="device-card">
       <Card body inverse color="info">
         <CardBody>
@@ -42,4 +47,5 @@ const DeviceCard = ({ device, getDeviceByID }) => {
 
 export default DeviceCard;
 
+>>>>>>> c6123c60db951374668b39aede522df7dec74716
 

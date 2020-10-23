@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   Button,
   Modal,
@@ -8,10 +8,11 @@ import {
   Col,
   Row,
   Form,
-  FormGroup,
+  FormGroup,a
   Label,
-  Input,
-} from 'reactstrap'
+  Input
+} from "reactstrap";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const AddDevice = ({ addDevice, userID }) => {
   // logic for modal open/close
@@ -26,32 +27,40 @@ const AddDevice = ({ addDevice, userID }) => {
   );
 
   // State for adding
+  const usersID = localStorage.getItem("id");
+  console.log(usersID);
   const [newDevice, setNewDevice] = useState({
-    id: "",
-    user_id: "",
+    user_id: parseInt(usersID),
     item_name: "",
     item_description: "",
     category: "",
-    rate: "",
+    rate: 0,
     img_url: ""
   });
 
   // on submit will call add device action and close modal
-  const handleSubmit = () => {
+  const handleSubmit = (evt) => {
     // Add device to database
-    console.log(newDevice);
+    evt.preventDefault();
+    const { name, value, type } = evt.target;
+    const valueToUse = type === "number" ? parseInt(value) : value;
+    setNewDevice({ ...newDevice, [name]: valueToUse });
+    axiosWithAuth()
+      .post(`/api/rentals/add`, newDevice)
+      .then((res) => {
+        console.log(res.data);
+      });
     //addDevice(newDevice, userID);
     toggle();
 
     // Reset newDevice data
     setNewDevice({
-    id: "",
-    user_id: "",
-    item_name: "",
-    item_description: "",
-    category: "",
-    rate: "",
-    img_url: ""
+      user_id: usersID,
+      item_name: "",
+      item_description: "",
+      category: "",
+      rate: 0,
+      img_url: ""
     });
   };
 
@@ -59,7 +68,7 @@ const AddDevice = ({ addDevice, userID }) => {
   const handleChange = (e) => {
     setNewDevice({
       ...newDevice,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
   return (
@@ -74,39 +83,15 @@ const AddDevice = ({ addDevice, userID }) => {
         <ModalBody>
           <Form>
             <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="name">ID</Label>
-                  <Input
-                    type="text"
-                    name=""
-                    placeholder=""
-                    onChange={(e) => {
-                      handleChange(e);
-                    }}
-                  />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="user">User ID</Label>
-                  <Input
-                    type="text"
-                    name=""
-                    placeholder=""
-                    onChange={(e) => {
-                      handleChange(e);
-                    }}
-                  />
-                </FormGroup>
-              </Col>
+              <Col md={6}></Col>
+              <Col md={6}></Col>
             </Row>
 
             <FormGroup>
               <Label for="name">Item Name</Label>
               <Input
-                type=""
-                name=""
+                type="text"
+                name="item_name"
                 onChange={(e) => {
                   handleChange(e);
                 }}
@@ -115,8 +100,8 @@ const AddDevice = ({ addDevice, userID }) => {
             <FormGroup>
               <Label for="description">Item Description</Label>
               <Input
-                type=""
-                name=""
+                type="text"
+                name="item_description"
                 onChange={(e) => {
                   handleChange(e);
                 }}
@@ -125,8 +110,8 @@ const AddDevice = ({ addDevice, userID }) => {
             <FormGroup>
               <Label for="category">Category</Label>
               <Input
-                type=""
-                name=""
+                type="text"
+                name="category"
                 placeholder=""
                 onChange={(e) => {
                   handleChange(e);
@@ -136,8 +121,8 @@ const AddDevice = ({ addDevice, userID }) => {
             <FormGroup>
               <Label for="rate">Rate</Label>
               <Input
-                type=""
-                name=""
+                type="number"
+                name="rate"
                 placeholder=""
                 onChange={(e) => {
                   handleChange(e);
@@ -147,15 +132,14 @@ const AddDevice = ({ addDevice, userID }) => {
             <FormGroup>
               <Label for="imageURL">Image URL</Label>
               <Input
-                type=""
-                name=""
+                type="text"
+                name="img_url"
                 placeholder=""
                 onChange={(e) => {
                   handleChange(e);
                 }}
               />
             </FormGroup>
-            
           </Form>
         </ModalBody>
         <ModalFooter>

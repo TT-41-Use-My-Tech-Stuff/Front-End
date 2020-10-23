@@ -1,17 +1,17 @@
 import React from 'react'
-import {
-  BrowserRouter as //Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom'
+// import {
+//   BrowserRouter as //Router,
+//   Switch,
+//   Route,
+//   Link
+// } from 'react-router-dom'
 import { Spinner } from 'reactstrap'
 // Components
 import Devices from './components/Devices'
 import DeviceCard from './components/DeviceCard'
 import Login from './components/SignIn'
-import Signup from './components/SignUp'
-import AddDevice from './components/AddDevice'
+// import Signup from './components/SignUp'
+// import AddDevice from './components/AddDevice'
 import LoadedDevice from './components/LoadedDevice'
 import Elements from './components/Elements'
 import Generic from './components/Generic'
@@ -38,52 +38,53 @@ import Signup from './components/SignUp'
 import AddDevice from './components/AddDevice'
 import PrivateRoute from './components/PrivateRoute'
 
-<<<<<<< HEAD
-function App(props) {git 
-  return (
-    <div className="App">
-      <Nav />
-=======
+
 export default function App () {
   return (
+    <>
     <div className='App'>
-      <nav>
+   
         <h3>Use My Tech Stuff</h3>
         <ul>
           <li>
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/signin>SignIn</Link>
+            <Link to='/signin'>SignIn</Link>
           </li>
           <li>
-            <Link to="/signup">SignUp</Link>
+            <Link to='/signup'>SignUp</Link>
           </li>
           <li>
-            <Link to="/devicelist">DeviceList</Link>
+            <Link to='/devicelist'>DeviceList</Link>
           </li>
         </ul>
-      </nav>
->>>>>>> c6123c60db951374668b39aede522df7dec74716
-      <div className="content">
-        <Switch>
-          <PrivateRoute exact path="/devicelist" component={DeviceList} />
-          <Route path="/devicelist/:id">
-            <DeviceForm />
+      
+    </div>
+
+      <div className='content'>
+         <Switch> // fuck this switch
+          <PrivateRoute exact path='/devicelist' component={DeviceList} />
+          <Route path='./DeviceList' />
+            <DeviceList />>
+          <Route path={/deviceList/`${deviceList.id}`} >
+            <DeviceList />                //???????
           </Route>
-         //<Route path='signin'>
-           </li> <SignIn />
-          </ul></Route>
+          <Route>
+            <DeviceForm id={id} />
+          </Route>
+         <Route path='/signin'>
+            <SignIn />
+          </Route>
           <Route path='/signup'>
-            <Signup />
+              <Signup />
           </Route>
-          <Route exact path="/">
+          <Route exact path='/'>
             <AddDevice />
           </Route>
         </Switch>
       </div>
-    </div>
-  );
+    );
 }
 
 // function mapStateToProps(state) {

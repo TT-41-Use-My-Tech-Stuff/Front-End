@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios'
 import {
   Button,
   Modal,
@@ -8,25 +9,26 @@ import {
   Col,
   Row,
   Form,
-  FormGroup,a
+  FormGroup,
   Label,
   Input
-} from "reactstrap";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
+}
+ from "reactstrap"
+// import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const AddDevice = ({ addDevice, userID }) => {
-  // logic for modal open/close
+  // logic htmlFor modal open/close
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
 
-  // custom close button for modal
+  // custom close button htmlFor modal
   const closeBtn = (
     <button className="close" onClick={toggle}>
       &times;
     </button>
   );
 
-  // State for adding
+  // State htmlFor adding
   const usersID = localStorage.getItem("id");
   console.log(usersID);
   const [newDevice, setNewDevice] = useState({
@@ -45,7 +47,8 @@ const AddDevice = ({ addDevice, userID }) => {
     const { name, value, type } = evt.target;
     const valueToUse = type === "number" ? parseInt(value) : value;
     setNewDevice({ ...newDevice, [name]: valueToUse });
-    axiosWithAuth()
+    // axiosWithAuth()
+    axios
       .post(`/api/rentals/add`, newDevice)
       .then((res) => {
         console.log(res.data);
@@ -88,7 +91,7 @@ const AddDevice = ({ addDevice, userID }) => {
             </Row>
 
             <FormGroup>
-              <Label for="name">Item Name</Label>
+              <Label htmlFor="name">Item Name</Label>
               <Input
                 type="text"
                 name="item_name"
@@ -98,7 +101,7 @@ const AddDevice = ({ addDevice, userID }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="description">Item Description</Label>
+              <Label htmlFor="description">Item Description</Label>
               <Input
                 type="text"
                 name="item_description"
@@ -108,7 +111,7 @@ const AddDevice = ({ addDevice, userID }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="category">Category</Label>
+              <Label htmlFor="category">Category</Label>
               <Input
                 type="text"
                 name="category"
@@ -119,7 +122,7 @@ const AddDevice = ({ addDevice, userID }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="rate">Rate</Label>
+              <Label htmlFor="rate">Rate</Label>
               <Input
                 type="number"
                 name="rate"
@@ -130,7 +133,7 @@ const AddDevice = ({ addDevice, userID }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="imageURL">Image URL</Label>
+              <Label htmlFor="imageURL">Image URL</Label>
               <Input
                 type="text"
                 name="img_url"

@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from 'react'
-<<<<<<< HEAD
+
 // import './assets/css/noscript.css'
 // import './assets/css/main.css'
-=======
-import '../styles/assets/css/noscript.css'
-import '../styles/assets/css/main.css'
->>>>>>> c6123c60db951374668b39aede522df7dec74716
+
 import Nav from './Nav'
 import Generic from './Generic'
 
 export default function Home(props) {
-<<<<<<< HEAD
+
     return(
         <div>
         <Nav />
   <section id="banner">
-=======
 
-    <section id="banner">
->>>>>>> c6123c60db951374668b39aede522df7dec74716
       <div className="inner">
           <h2>Use My Tech Stuff</h2>
             <>
@@ -202,6 +196,6 @@ export default function Home(props) {
             </ul>
             </footer>
         </section>
-    
+    </div>
     )
 }

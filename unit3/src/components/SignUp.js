@@ -4,9 +4,11 @@ import { useForm } from 'react-hook-form'
 
 import { axiosWithAuth } from '../utils/axiosWithAuth'
 
-const SignUp = () => {
-  const { register, handleSubmit, errors, setValue } = useForm()
-  const history = useHistory()
+export default const SignUp = () => {
+    const { register, handleSubmit, errors, setValue } = useForm()
+    const history = useHistory()
+    }
+    
 
   const onSubmit = (data) => {
     console.log(data)
@@ -29,8 +31,9 @@ const SignUp = () => {
   }
 
   return (
+
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <input
           type='email'
           placeholder='Example@example.com'
@@ -50,5 +53,6 @@ const SignUp = () => {
           ref={register({
             required: 'Password required'
 }
+</div>
 
-export default SignUp
+
